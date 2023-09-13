@@ -1,0 +1,57 @@
+body {
+	font-family: system ui;
+	background-color: rgba(255, 255, 128, 0.5);
+	text-align: center;
+}
+button {
+	height: 40px;
+	width: auto;
+	background-color: powderblue;
+}
+
+input {
+	padding: 13px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+  }
+  
+ 
+  .wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+  }
+  
+  .text {
+	width: 12ch;
+	color: rgb(187, 57, 89);
+	font-family: monospace;
+	font-size: 30px;
+	white-space: nowrap; /* не переносить текст на другую строку */
+	overflow: hidden; /* скрываем переполнение контентом */
+	border-right: 3px solid white; /* рисуем курсор */
+	animation: cursor 0.75s step-end infinite, printed_text 5s steps(29);
+  }
+  
+  @keyframes cursor {
+	0% {
+	  border-color: white;
+	}
+  
+	50% {
+	  border-color: transparent;
+	}
+  
+	100% {
+	  border-color: white;
+	}
+  }
+  
+  @keyframes printed_text {
+	from {
+	  width: 0;
+	}
+  }
